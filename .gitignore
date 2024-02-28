@@ -1,0 +1,25 @@
+# Staticfiles
+static/*
+!static/.gitkeep
+media/*
+!media/.gitkeep
+
+# MacOS
+**/.DS_Store
+
+# PyCharm
+.idea/
+
+# Python
+**/__pycache__
+
+# Environment
+.env
+
+# Poetry
+poetry.lock
+
+# Logs
+*.log
+logs/
+**/logs/

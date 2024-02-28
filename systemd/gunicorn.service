@@ -1,0 +1,12 @@
+[Unit]
+Description=Gunicorn with UnicornWorkers daemon
+After=network.target
+
+[Service]
+User=fa_user
+WorkingDirectory=fa_template_path/src
+ExecStart=fa_gunicorn_path -m gunicorn main:app --worker-class uvicorn.workers.UvicornWorker --bind unix:fa_template_path/gunicorn/gunicorn.sock --access-logfile fa_template_path/gunicorn/access.log --error-logfile fa_template_path/gunicorn/error.log
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

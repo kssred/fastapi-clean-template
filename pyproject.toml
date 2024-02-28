@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "fastapi-clean-template"
+version = "0.1.0"
+description = ""
+authors = ["Kirill Redko <domovoidie@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.110.0"
+sqlalchemy = { extras = ["asyncio"], version = "^2.0.27" }
+alembic = "^1.13.1"
+greenlet = "^3.0.3"
+pydantic = "^2.6.3"
+pydantic-settings = "^2.2.1"
+uvicorn = {extras = ["standart"], version = "^0.27.1"}
+gunicorn = "^21.2.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
