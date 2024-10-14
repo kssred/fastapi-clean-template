@@ -1,0 +1,15 @@
+{
+  "venv": "/Users/ksred/Library/Caches/pypoetry/virtualenvs/gym-tracker-ZP0pkNpj-py3.12",
+  "venvPath": ".",
+  "stubPath": "./stubs",
+  "include": [
+    "src/**/*.py",
+    "tests/**/*.py",
+  ],
+  "exclude": [
+    "**/node_modules",
+    "**/__pycache__",
+    "src/experimental",
+    "src/typestubs"
+  ]
+}
