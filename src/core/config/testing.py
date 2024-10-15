@@ -5,7 +5,7 @@ from src.core.config.base import EmailSettings, LogSettings, RedisSettings
 
 
 class EmailSettingsTest(EmailSettings):
-    BACKEND: Optional[str] = "src.service.mail.EmailLocmemBackend"
+    BACKEND: Optional[str] = "src.services.mail.EmailLocmemBackend"
 
 
 class LogSettingsTest(LogSettings):
@@ -17,4 +17,4 @@ class RedisSettingsTest(RedisSettings):
     DATA_DB: int = 15
     LOG_DB: Optional[int] = 15
     CACHE_DB: int = 15
-    BACKEND: Optional[str] = "src.service.cache.InMemoryBackend"
+    BACKEND: Optional[str] = "src.services.cache.InMemoryBackend"

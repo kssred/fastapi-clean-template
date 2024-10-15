@@ -38,7 +38,9 @@ text_1500 = Annotated[str, mapped_column(String(length=1500), nullable=False)]
 # Date, time
 created_at = Annotated[
     datetime,
-    mapped_column(DateTime, server_default=text("TIMEZONE('utc', now())")),
+    mapped_column(
+        DateTime, server_default=text("TIMEZONE('utc', now())"), comment="Создан"
+    ),
 ]
 updated_at = Annotated[
     datetime,
@@ -46,5 +48,6 @@ updated_at = Annotated[
         DateTime,
         server_default=text("TIMEZONE('utc', now())"),
         onupdate=Clock.utc_now,
+        comment="Изменён",
     ),
 ]

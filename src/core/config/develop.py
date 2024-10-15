@@ -5,8 +5,9 @@ from src.utils.enums import SecondsTo
 
 
 class EmailSettingsDev(EmailSettings):
-    # BACKEND: str = "src.service.mail.backend.EmailSMTPBackend"
-    BACKEND: Optional[str] = "src.service.mail.EmailConsoleBackend"
+    BACKEND: Optional[str] = "src.services.mail.EmailSMTPBackend"
+    USE_SSL: Optional[bool] = True
+    # BACKEND: Optional[str] = "src.services.mail.EmailConsoleBackend"
 
 
 class AuthSettingsDev(AuthSettings):

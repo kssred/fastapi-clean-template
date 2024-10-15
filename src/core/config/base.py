@@ -99,17 +99,18 @@ class AuthSettings(PyBaseSettings):
     JWT_REFRESH_TOKEN_LIFETIME: int = SecondsTo.ONE_WEEK * 2
     RESET_TOKEN_LIFETIME: int = SecondsTo.ONE_MINUTE * 15
     CONFIRM_TOKEN_LIFETIME: int = SecondsTo.ONE_HOUR
+    CHANGE_TOKEN_LIFETIME: int = SecondsTo.ONE_HOUR
     SECRET: str
-    COOKIE_NAME: str = "m_token"
+    COOKIE_NAME: str = "c_token"
     COOKIE_MAX_AGE: int = SecondsTo.ONE_HOUR
     COOKIE_DOMAIN: str = "localhost"
     COOKIE_SECURE: bool = True
     COOKIE_HTTPONLY: bool = True
     COOKIE_SAMESITE: str = "lax"
     PASSWORD_VALIDATORS: list[str] = [
-        "src.service.validators.password.MinLengthPasswordValidator",
-        "src.service.validators.password.NumericPasswordValidator",
-        "src.service.validators.password.CommonPasswordValidator",
+        "src.services.validators.password.MinLengthPasswordValidator",
+        "src.services.validators.password.NumericPasswordValidator",
+        "src.services.validators.password.CommonPasswordValidator",
     ]
 
     model_config = get_model_config("AUTH_")

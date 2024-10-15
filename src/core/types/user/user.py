@@ -7,6 +7,7 @@ from .gender import GenderType
 
 class UserProtocol(Protocol):
     id: UUID
+    first_name: str
     email: str
     gender: GenderType
     hashed_password: str

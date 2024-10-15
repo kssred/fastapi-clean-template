@@ -18,8 +18,8 @@ celery_app = Celery(
 
 celery_app.autodiscover_tasks(
     [
-        "src.service.auth",
-        "src.service.mail",
+        "src.services.auth",
+        "src.services.mail",
         "src.logs",
     ]
 )
